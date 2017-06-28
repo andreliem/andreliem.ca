@@ -20,9 +20,9 @@
         let post = this.$store.state.posts.list.find((post) => {
           return (post.slug === this.$route.params.slug)
         })
-        /* if (!post) {
-          return
-        } */
+        if (!post) {
+          return ''
+        }
         marked.setOptions({
           highlight: function (code) {
             return require('highlight.js').highlightAuto(code).value

@@ -15,6 +15,7 @@ module.exports = {
   },
   generate: {
     routes: [
+      '/',
       '/getting-started-nuxt-markdown'
     ]
   },
@@ -42,10 +43,6 @@ module.exports = {
           limit: 1000, // 1 KO
           name: 'fonts/[name].[hash:7].[ext]'
         }
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
       },
       {
         test: /\.md$/,

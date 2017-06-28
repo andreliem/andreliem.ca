@@ -6,7 +6,7 @@
           <author size="small"></author>
         </div>
       </div>
-      <div class="container-fluid">
+      <div class="container-fluid" v-if="postExists">
         <div class="row justify-content-center mt-3">
           <div class="col-sm-10">
             <h6 class="created-at" v-html="post.created_at"></h6>
@@ -34,16 +34,15 @@
       slug () {
         return this.$route.params.slug
       },
+      postExists () {
+        return !!(this.$store.state.posts.list.find((post) => {
+          return (post.slug === this.$route.params.slug)
+        }))
+      },
       post () {
         let post = this.$store.state.posts.list.find((post) => {
           return (post.slug === this.$route.params.slug)
         })
-        /* if (!post) { // temporary until root slug path can be ignored
-          return {
-            title: 'ah'
-          }
-        } */
-
         return post
       }
     }
@@ -51,8 +50,6 @@
 </script>
 
 <style lang="less" type="text/less">
-  // @import '../styles/github.less';
-
   .markdown {
     font-size: 1.2em;
 
@@ -71,18 +68,12 @@
     pre {
       margin: 2.2em 0;
     }
-
-
   }
-
 </style>
 
 <style lang="less" scoped type="text/less">
   @import '../styles/base.less';
   .page-slug {
     margin-top: 5em;
-  }
-  .post-content {
-    //font-size: 1.2em;
   }
 </style>

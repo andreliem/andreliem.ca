@@ -26,12 +26,17 @@
 </template>
 
 <script>
+  import Author from '~/components/author'
+
   export default {
+    components: {
+      Author
+    },
     head () {
       return {
         title: 'Andre Liem',
         meta: [
-          { hid: 'description', name: 'description', content: 'My custom description' }
+          { hid: 'home', name: 'Andre Liem - Home Page', content: 'Web Development, Full Stack, VueJS, Laravel, PHP' }
         ]
       }
     },
