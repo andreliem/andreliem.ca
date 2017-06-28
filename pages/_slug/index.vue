@@ -7,14 +7,22 @@
   import marked from 'marked'
   export default {
     layout: 'slug',
+    head () {
+      return {
+        title: 'Andre Liem',
+        meta: [
+          { hid: 'description', name: 'description', content: 'My custom description' }
+        ]
+      }
+    },
     computed: {
       postContent () {
         let post = this.$store.state.posts.list.find((post) => {
           return (post.slug === this.$route.params.slug)
         })
-        if (!post) {
+        /* if (!post) {
           return
-        }
+        } */
         marked.setOptions({
           highlight: function (code) {
             return require('highlight.js').highlightAuto(code).value

@@ -13,6 +13,11 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  generate: {
+    routes: [
+      '/getting-started-nuxt-markdown'
+    ]
+  },
   /*
   ** Customize the progress-bar color
   */

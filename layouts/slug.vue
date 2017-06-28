@@ -38,11 +38,11 @@
         let post = this.$store.state.posts.list.find((post) => {
           return (post.slug === this.$route.params.slug)
         })
-        if (!post) { // temporary until root slug path can be ignored
+        /* if (!post) { // temporary until root slug path can be ignored
           return {
             title: 'ah'
           }
-        }
+        } */
 
         return post
       }

@@ -26,10 +26,14 @@
 </template>
 
 <script>
-  import Author from '~/components/author'
   export default {
-    components: {
-      Author
+    head () {
+      return {
+        title: 'Andre Liem',
+        meta: [
+          { hid: 'description', name: 'description', content: 'My custom description' }
+        ]
+      }
     },
     computed: {
       posts () {
