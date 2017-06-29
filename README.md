@@ -11,6 +11,9 @@ Provides the following:
 - syntax highlighting (buggy)
 - vuex + without any API 
 
+*Ignore* the `/dist` folder in the repo! I'm currently pushing the dist as part of a hacky
+deployment process. I'll look at changing this up soon.
+
 ## Build Setup (nuxt)
 
 ``` bash
