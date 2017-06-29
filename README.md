@@ -1,8 +1,9 @@
 # andreliem.ca
 
-> My Personal Website Based off NUXT
-> Feel free to use for your own personal site. 
-> Very experimental right now.
+My personal website using the NUXT framework. 
+
+Feel free to use for your own personal site but be
+warned that this is very experimental right now.
 
 Provides the following:
 - slug based blog posts
