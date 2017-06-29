@@ -1,8 +1,16 @@
 # andreliem.ca
 
 > My Personal Website Based off NUXT
+> Feel free to use for your own personal site. 
+> Very experimental right now.
 
-## Build Setup
+Provides the following:
+- slug based blog posts
+- markdown
+- syntax highlighting (buggy)
+- vuex + without any API 
+
+## Build Setup (nuxt)
 
 ``` bash
 # install dependencies
@@ -20,4 +28,3 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-# andreliem.ca
