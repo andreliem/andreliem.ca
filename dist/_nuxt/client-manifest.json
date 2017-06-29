@@ -6,23 +6,23 @@
     "fonts/fontawesome-webfont.b06871f.ttf",
     "fonts/fontawesome-webfont.af7ae50.woff2",
     "fonts/fontawesome-webfont.fee66e7.woff",
-    "0.nuxt.bundle.73664fb09f0392702fe0.js",
+    "0.nuxt.bundle.898db5e55ad9b350328d.js",
     "fonts/fontawesome-webfont.674f50d.eot",
     "2.nuxt.bundle.aae5bd5904b4a017a014.js",
     "3.nuxt.bundle.492464d81c08199d284b.js",
     "vendor.bundle.66c57ae462fdf62a4d28.js",
     "nuxt.bundle.595908d3b366621a853b.js",
-    "manifest.b415ec0d62a4a7afdc98.js",
+    "manifest.95b4bdbe128b878ddb12.js",
     "index.html"
   ],
   "initial": [
-    "manifest.b415ec0d62a4a7afdc98.js",
+    "manifest.95b4bdbe128b878ddb12.js",
     "vendor.bundle.66c57ae462fdf62a4d28.js",
     "nuxt.bundle.595908d3b366621a853b.js"
   ],
   "async": [
     "1.nuxt.bundle.d6e14ad628b582a66dc1.js",
-    "0.nuxt.bundle.73664fb09f0392702fe0.js",
+    "0.nuxt.bundle.898db5e55ad9b350328d.js",
     "2.nuxt.bundle.aae5bd5904b4a017a014.js",
     "3.nuxt.bundle.492464d81c08199d284b.js"
   ],
