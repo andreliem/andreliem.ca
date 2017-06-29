@@ -40,9 +40,13 @@
         ]
       }
     },
+    fetch ({store}) {
+      store.dispatch('getPosts')
+    },
     computed: {
       posts () {
-        return this.$store.state.posts.list
+        return this.$store.state.posts
+        // return this.$store.state.posts.list
       }
     }
   }

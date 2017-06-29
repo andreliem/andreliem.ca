@@ -5,6 +5,7 @@
   "author": "Andre Liem <andre.liem@gmail.com>",
   "private": true,
   "dependencies": {
+    "highlight.js": "^9.12.0",
     "html-loader": "^0.4.5",
     "markdown-loader": "^2.0.0",
     "nuxt": "latest",
@@ -26,7 +27,6 @@
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-standard": "^2.0.1",
-    "highlight.js": "^9.12.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "markdown-loader": "^2.0.0",

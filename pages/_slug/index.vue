@@ -1,13 +1,13 @@
 <template>
   <div class="post">
     <div v-html="postContent"></div>
-
     <disqus ref="disqus" v-bind:shortname="disqusShortname" :identifier="disqusId"></disqus>
   </div>
 </template>
 <script type="text/babel">
-  import marked from 'marked'
+  import Marked from 'marked'
   import Disqus from 'vue-disqus/VueDisqus.vue'
+  import HighlightJs from 'highlight.js'
 
   export default {
     layout: 'slug',
@@ -16,40 +16,33 @@
     },
     head () {
       let post = this.post
-      let meta = {
-        hid: '',
-        name: '',
-        content: ''
-      }
-      if (post) {
-        meta.hid = post.id
-        meta.name = post.title
-        meta.content = post.title
-      }
       return {
         title: 'Andre Liem',
         meta: [
-          meta
+          {
+            hid: post.meta.id,
+            name: post.meta.name,
+            content: post.meta.content
+          }
         ]
       }
     },
+    fetch ({store, params}) {
+      store.dispatch('getPosts')
+      store.dispatch('getPostWithSlug', params.slug)
+    },
     computed: {
       post () {
-        return this.$store.state.posts.list.find((post) => {
-          return (post.slug === this.$route.params.slug)
-        })
+        return this.$store.state.post
       },
       postContent () {
-        let post = this.post
-        if (!post) {
-          return ''
-        }
-        marked.setOptions({
+        let post = this.$store.state.post
+        Marked.setOptions({
           highlight: function (code) {
-            return require('highlight.js').highlightAuto(code).value
+            return HighlightJs.highlightAuto(code).value
           }
         })
-        return marked(require(`../../content/posts/${post.id}.md`))
+        return Marked(require(`../../content/posts/${post.id}.md`))
       },
       disqusShortname () {
         return 'andreliem-1'

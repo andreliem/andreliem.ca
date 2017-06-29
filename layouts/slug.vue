@@ -1,12 +1,12 @@
 <template>
-  <div class="page-slug">
+  <div class="page-slug" v-if="postExists">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
           <author size="small"></author>
         </div>
       </div>
-      <div class="container-fluid" v-if="postExists">
+      <div class="container-fluid">
         <div class="row justify-content-center mt-3">
           <div class="col-sm-10">
             <h6 class="created-at" v-html="post.created_at"></h6>
@@ -30,20 +30,22 @@
     components: {
       Author
     },
+    fetch ({store, params}) {
+      store.dispatch('getPosts')
+      store.dispatch('getPostWithSlug', params.slug)
+    },
     computed: {
       slug () {
         return this.$route.params.slug
       },
       postExists () {
-        return !!(this.$store.state.posts.list.find((post) => {
-          return (post.slug === this.$route.params.slug)
-        }))
+        return !!this.$store.state.post
       },
       post () {
-        let post = this.$store.state.posts.list.find((post) => {
+        /* let post = this.$store.state.posts.find((post) => {
           return (post.slug === this.$route.params.slug)
-        })
-        return post
+        }) */
+        return this.$store.state.post
       }
     }
   }

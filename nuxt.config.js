@@ -76,9 +76,11 @@ module.exports = {
     }
   },
   css: [
-    '~assets/css/bootstrap.min.css',
-    '~assets/css/font-awesome.css',
     '~assets/css/highlightjs.min.css'
   ],
-  plugins: ['~plugins/vue-highlightjs']
+  plugins: ['~plugins/vue-highlightjs'],
+  modules: [
+    '@nuxtjs/bootstrap-vue',
+    '@nuxtjs/font-awesome'
+  ]
 }

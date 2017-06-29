@@ -1,6 +1,6 @@
 # andreliem.ca
 
-> Andre's personal website
+> My Personal Website Based off NUXT
 
 ## Build Setup
 
