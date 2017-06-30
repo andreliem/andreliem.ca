@@ -45,20 +45,6 @@ module.exports = {
           limit: 1000, // 1 KO
           name: 'fonts/[name].[hash:7].[ext]'
         }
-      },
-      {
-        test: /\.md$/,
-        use: [
-          {
-            loader: 'html-loader'
-          },
-          {
-            loader: 'markdown-loader',
-            options: {
-              /* your options here */
-            }
-          }
-        ]
       }
     ],
     /*
@@ -79,11 +65,12 @@ module.exports = {
     '~assets/css/highlightjs.min.css'
   ],
   plugins: [
-    '~plugins/vue-highlightjs',
-    { src: '~plugins/ga.js', ssr: false }
+    '~plugins/vue-highlightjs'
   ],
   modules: [
     '@nuxtjs/bootstrap-vue',
-    '@nuxtjs/font-awesome'
+    '@nuxtjs/font-awesome',
+    ['@nuxtjs/google-analytics', { ua: 'UA-104010-6' }],
+    ['@nuxtjs/markdownit', { html: true, linkify: true, breaks: true }]
   ]
 }

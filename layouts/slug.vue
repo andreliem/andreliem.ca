@@ -42,9 +42,6 @@
         return !!this.$store.state.post
       },
       post () {
-        /* let post = this.$store.state.posts.find((post) => {
-          return (post.slug === this.$route.params.slug)
-        }) */
         return this.$store.state.post
       }
     }

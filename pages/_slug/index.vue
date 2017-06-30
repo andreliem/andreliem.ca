@@ -5,9 +5,7 @@
   </div>
 </template>
 <script type="text/babel">
-  import Marked from 'marked'
   import Disqus from 'vue-disqus/VueDisqus.vue'
-  import HighlightJs from 'highlight.js'
 
   export default {
     layout: 'slug',
@@ -37,12 +35,7 @@
       },
       postContent () {
         let post = this.$store.state.post
-        Marked.setOptions({
-          highlight: function (code) {
-            return HighlightJs.highlightAuto(code).value
-          }
-        })
-        return Marked(require(`../../content/posts/${post.id}.md`))
+        return require(`../../content/posts/${post.id}.md`)
       },
       disqusShortname () {
         return 'andreliem-1'
