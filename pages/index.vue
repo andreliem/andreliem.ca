@@ -45,8 +45,9 @@
     },
     computed: {
       posts () {
-        return this.$store.state.posts
-        // return this.$store.state.posts.list
+        return this.$store.state.posts.sort((a, b) => {
+          return (b.id - a.id)
+        })
       }
     }
   }

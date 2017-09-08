@@ -16,9 +16,10 @@ module.exports = {
   generate: {
     routes: [
       '/',
-      '/getting-started-nuxt-markdown',
-      '/my-top-10-favourites-of-being-a-freelancer-software-developer',
-      '/setting-up-php-xdebug-with-laravel-vagrant-and-phpstorm'
+      '/getting-started-nuxt-markdown/',
+      '/my-top-10-favourites-of-being-a-freelancer-software-developer/',
+      '/setting-up-php-xdebug-with-laravel-vagrant-and-phpstorm/',
+      '/browser-testing-locally-ie-with-vagrant/'
     ]
   },
   /*
