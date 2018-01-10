@@ -24,29 +24,29 @@ const makeStore = () => {
       getPosts ({commit}) {
         commit('updatePosts', { posts: [
           {
-            id: 1,
+            id: 2,
             slug: 'my-top-10-favourites-of-being-a-freelancer-software-developer',
             title: 'My top 10 favourites of being a freelance software developer',
             created_at: '10/18/2016',
             meta: {
-              id: 1,
+              id: 2,
               name: 'My Top 10 Freelancing Benefits for Software Developers',
               content: 'My Top 10 Favourites of being freelancer in Software'
             }
           },
           {
-            id: 2,
+            id: 3,
             slug: 'setting-up-php-xdebug-with-laravel-vagrant-and-phpstorm',
             title: 'Setting up PHP xdebug with Laravel, Vagrant, and PHPStorm',
             created_at: '10/18/2016',
             meta: {
-              id: 2,
+              id: 3,
               name: 'Setting up PHP XDebug with Vagrant + Phpstorm',
               content: 'Tutorial on getting xDebug setup on phpstorm on a Vagrant machine'
             }
           },
           {
-            id: 3,
+            id: 1,
             slug: 'getting-started-nuxt-markdown',
             title: 'Getting Started with Nuxt + MarkDown',
             created_at: '06/27/2017',

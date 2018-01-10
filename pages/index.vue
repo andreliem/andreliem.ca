@@ -45,8 +45,8 @@
     },
     computed: {
       posts () {
-        return this.$store.state.posts.sort((a, b) => {
-          return (b.id - a.id)
+        return this.$store.state.posts.concat().sort((a, b) => {
+          return new Date(b.created_at) - new Date(a.created_at)
         })
       }
     }
