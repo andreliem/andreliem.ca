@@ -16,6 +16,7 @@ module.exports = {
   generate: {
     routes: [
       '/',
+      '/get-things-done-with-trello-repeats/',
       '/getting-started-nuxt-markdown/',
       '/my-top-10-favourites-of-being-a-freelancer-software-developer/',
       '/setting-up-php-xdebug-with-laravel-vagrant-and-phpstorm/',
